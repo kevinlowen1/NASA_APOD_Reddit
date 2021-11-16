@@ -1,14 +1,13 @@
-## API KEY:  Ga7t4uEhzVS1WoLmVHDcZrBZXFA5RD61rtwv1S4s
+## API KEY: hidden in config.py, not published to git
 ## SAMPLE URL REQUEST: https://api.nasa.gov/planetary/apod?api_key=Ga7t4uEhzVS1WoLmVHDcZrBZXFA5RD61rtwv1S4s
 ## ACCOUNT EMAIL: kevinlowen@gmail.com
-## ACCOUNT ID: b9024c33-d250-4a66-a404-99cd0fed8254
+## ACCOUNT ID: hidden in config.py, not published to git
 
 from PIL import Image
 import requests
-#from io import BytesIO
-#import pprint
+import config
 
-r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=Ga7t4uEhzVS1WoLmVHDcZrBZXFA5RD61rtwv1S4s')
+r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.API_KEY)
 author          = r.json()['copyright']
 date            = r.json()['date']
 explanation     = r.json()['explanation']
@@ -26,5 +25,4 @@ url             = r.json()['url']
 # print('url is         : ' + url           )
 
 img = Image.open(requests.get(url, stream=True).raw)
-print(type(img))
-
+#img.show()
