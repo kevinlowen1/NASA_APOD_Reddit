@@ -1,10 +1,4 @@
-Sample Module Repository
+NASA APOD Reddit
 ========================
 
-This simple project is an example repo for Python projects.
-
-`Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
-
----------------
-
-If you want to learn more about ``setup.py`` files, check out `this repository <https://github.com/kennethreitz/setup.py>`_.
+scripts to make a daily upload to a subreddit with details from the NASA APOD 
