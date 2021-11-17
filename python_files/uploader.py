@@ -52,12 +52,10 @@ reddit = praw.Reddit(client_id=config.REDDIT_OAUTH_CLIENT_ID,
                      refresh_token=config.REDDIT_REFRESH_TOKEN)
 
 subr = 'ASTRONOMY_DAILY' # Choose your subreddit
-subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
 title = 'THIS IS A TEST'
-selftext = '''
-I am learning how to use the Reddit API with Python using the PRAW wrapper.
-By following the tutorial on https://www.jcchouinard.com/post-on-reddit-api-with-python-praw/
-This post was uploaded from my Python Script
-'''
+selftext = 'test of text post'
+
+subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
+
 
 subreddit.submit(title,selftext=selftext)
