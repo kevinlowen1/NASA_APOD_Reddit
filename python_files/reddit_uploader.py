@@ -55,7 +55,10 @@ subr = 'ASTRONOMY_DAILY' # Choose your subreddit
 title = 'THIS IS A TEST'
 selftext = 'test of text post'
 
-subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
+# subreddit = reddit.subreddit(subr) # Initialize the subreddit to a variable
 
 
-subreddit.submit(title,selftext=selftext)
+# subreddit.submit(title,selftext=selftext)
+
+image = r'C:\Users\Kevin.DESKTOP-9D0VMK8\Documents\Projects\NASA_APOD_Reddit\python_files\test.png'
+reddit.subreddit(subr).submit_image(title, image)
