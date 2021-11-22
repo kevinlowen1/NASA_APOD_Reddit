@@ -60,5 +60,5 @@ selftext = 'test of text post'
 
 # subreddit.submit(title,selftext=selftext)
 
-image = r'C:\Users\Kevin.DESKTOP-9D0VMK8\Documents\Projects\NASA_APOD_Reddit\python_files\test.png'
+image = r'C:\Users\Kevin.DESKTOP-9D0VMK8\Documents\Projects\NASA_APOD_Reddit\python_files\test.jpg'
 reddit.subreddit(subr).submit_image(title, image)
