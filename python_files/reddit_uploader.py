@@ -1,6 +1,9 @@
 import config
 import praw
 
+###praw documenation
+#https://praw.readthedocs.io/en/latest/code_overview/models/subreddit.html?highlight=submit#praw.models.Subreddit.submit_image
+
 def reddit_uploader(info):
     reddit = praw.Reddit(client_id=config.REDDIT_OAUTH_CLIENT_ID,
                         client_secret=config.REDDIT_SECRET_KEY,
