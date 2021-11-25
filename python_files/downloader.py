@@ -4,8 +4,8 @@ import urllib
 # from pytube import YouTube
 
 def nasa_apod_downloader():
-    r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.NASA_API_KEY + '&date=2021-11-10')
     # r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.NASA_API_KEY + '&date=2021-11-10')
+    r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.NASA_API_KEY)
     # print(r.json())
     author          = r.json()['copyright']
     date            = r.json()['date']
@@ -25,8 +25,7 @@ def nasa_apod_downloader():
 
     if(media_type == 'video'):
         print('video APOD, wtf dude')
-        file_location = 'none'
-        youtubeDownloader()
+        file_location = youtubeDownloader()
     else:
         print('continuing as normal, photo APOD')
         file_location = urllib.request.urlretrieve(url, r'C:\temp\test.jpg')
@@ -37,6 +36,7 @@ def nasa_apod_downloader():
 def youtubeDownloader():
     # yt = "https://www.youtube.com/embed/25FfQ9MEQE8"
     print("stuff to happen here, in youtubeDownloader, later")
+    return "nothing to return"
 
 if __name__ == "__main__":
    nasa_apod_downloader()
