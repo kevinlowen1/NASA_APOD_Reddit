@@ -20,7 +20,10 @@ def nasa_apod_downloader():
     # print('title is       : ' + title         )
     # print('url is         : ' + url           )
 
-    testfile = urllib.request.urlretrieve(url, r'C:\temp\test.jpg')
+    file_location = urllib.request.urlretrieve(url, r'C:\temp\test.jpg')
+    info = [title, url, hdurl, explanation,  date, author, media_type, file_location]
+
+    return info
 
 
 

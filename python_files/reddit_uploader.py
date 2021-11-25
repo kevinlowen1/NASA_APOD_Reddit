@@ -1,7 +1,7 @@
 import config
 import praw
 
-def reddit_uploader():
+def reddit_uploader(info):
     reddit = praw.Reddit(client_id=config.REDDIT_OAUTH_CLIENT_ID,
                         client_secret=config.REDDIT_SECRET_KEY,
                         user_agent='script by u/ilikecake123',
@@ -9,10 +9,9 @@ def reddit_uploader():
                         refresh_token=config.REDDIT_REFRESH_TOKEN)
 
     subr = 'ASTRONOMY_DAILY' # Choose your subreddit
-    title = 'THIS IS SO NOT A TEST'
 
     image = r'C:\temp\test.jpg'
-    reddit.subreddit(subr).submit_image(title, image)
+    reddit.subreddit(subr).submit_image(info[0], image)
 
 if __name__ == "__main__":
    reddit_uploader()
