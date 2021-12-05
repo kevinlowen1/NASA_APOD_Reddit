@@ -7,7 +7,7 @@ def nasa_apod_downloader():
     # r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.NASA_API_KEY + '&date=2021-11-10')
     r               = requests.get('https://api.nasa.gov/planetary/apod?api_key=' + config.NASA_API_KEY)
     # print(r.json())
-    author          = r.json()['copyright']
+    #author          = r.json()['copyright']
     date            = r.json()['date']
     explanation     = r.json()['explanation']
     # hdurl           = r.json()['hdurl']
@@ -30,7 +30,7 @@ def nasa_apod_downloader():
         print('continuing as normal, photo APOD')
         file_location = urllib.request.urlretrieve(url, r'C:\temp\test.jpg')
     
-    info = [title, url, explanation,  date, author, media_type, file_location]
+    info = [title, url, explanation,  date, media_type, file_location]
     return info
 
 def youtubeDownloader():
